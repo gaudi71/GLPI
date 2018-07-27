@@ -1,4 +1,4 @@
-function getDataBaseLocal(){
+function getDataBase(){
 	// chargement du fichier ini
 	$ini = parse_ini_file("Connexion.ini",true);
 	
