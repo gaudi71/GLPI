@@ -1,12 +1,10 @@
 function getDataBase(){
-	// chargement du fichier ini
-	$ini = parse_ini_file("Connexion.ini",true);
 	
 	// Accès à la base de données			
-	$bdd_servername = $ini['bdd_Local']['bdd_servername'];
-	$bdd_username = $ini['bdd_Local']['bdd_username'];
-	$bdd_password = $ini['bdd_Local']['bdd_password'];
-	$bdd_dbname = $ini['bdd_Local']['bdd_dbname'];
+	$bdd_servername = "localhost";
+	$bdd_username = "root";
+	$bdd_password = "root";
+	$bdd_dbname =   "glpi_parc";
 
 	try {
 		$bdd = new PDO("mysql:host=$bdd_servername;dbname=$bdd_dbname", $bdd_username, $bdd_password);
